@@ -10,7 +10,7 @@ class Client:
         if password is None:
             password = 'defualt'
         try:
-            self.__client = clickhouse_driver.Client('localhost', password='clickhouse')
+            self.__client = clickhouse_driver.Client(host, port, password=password)
         except Exception:
             print("Cannot connect to database.")
 
