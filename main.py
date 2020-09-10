@@ -20,7 +20,7 @@ table_destination = config['db']['table_destination']
 def _main():
     client = Client(host, port, password)
     bucket = Bucket(source_bucket)
-    sensor = Sensor(project,subscription, bucket, table_destination, client)
+    sensor = Sensor(project, subscription, bucket, table_destination, client)
     sensor.poll_notifications()
 
 if __name__ == "__main__":
