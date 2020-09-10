@@ -42,7 +42,7 @@ class Client:
 
     def insert_values(self, source_path, table_name):
         INSERT_SQL_QUERY = f"INSERT INTO {table_name} VALUES"
-        SHIFT_SIZE = 100
+        SHIFT_SIZE = 100 # By default clickhouse allows insert only 100 rows at once
         try:
             rows_to_insert = [line for line in self.row_reader(source_path) if line]
             for shift in range(0, len(rows_to_insert), SHIFT_SIZE):
