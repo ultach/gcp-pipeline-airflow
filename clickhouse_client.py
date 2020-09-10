@@ -54,4 +54,3 @@ class Client:
     
     def execute_query(self, sql_query):
         return self.__client.execute(sql_query)
-

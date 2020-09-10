@@ -14,4 +14,3 @@ class Bucket:
         """Uploads a file to the bucket."""
         blob = self.__bucket.blob(destination_file)
         blob.upload_from_filename(source_file)
-

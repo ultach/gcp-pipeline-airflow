@@ -41,5 +41,3 @@ t1 = PythonOperator(task_id="build_daily_stat", dag=dag, python_callable=build_d
 t2 = PythonOperator(task_id="sent_daily_report", dag=dag, python_callable=sent_daily_report)
 
 t1 >> t2
-
-
